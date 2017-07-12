@@ -12,7 +12,7 @@ RSpec.feature 'User submits a new song' do
     visit artist_path(artist)
 
     # And I click "New song"
-    click_on "New song"
+    click_on "New Song"
 
     # And I fill in the title
     fill_in "song_title", with: song_title
