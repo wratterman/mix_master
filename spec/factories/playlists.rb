@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :playlist do
-    name "MyString"
+    name "Fire!!!"
   end
 end
