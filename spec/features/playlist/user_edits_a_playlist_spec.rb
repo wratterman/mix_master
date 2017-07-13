@@ -11,13 +11,11 @@ RSpec.feature "User goes to playlists index" do
     visit playlist_path(existing_playlist)
     click_on "Edit"
     fill_in "playlist_name", with: name
-    uncheck("song-#{song1.id}")
     check("song-#{song2.id}")
 
     click_on "Update Playlist"
 
     expect(page).to have_content name
-    expect(page).to have_content song2.title
-    expect(page).to not_have_content song1.title
+    expect(page).to have_link song2.title
   end
 end
