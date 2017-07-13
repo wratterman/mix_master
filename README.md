@@ -1,5 +1,12 @@
 # README
 
+Heroku Url: https://guarded-sands-89559.herokuapp.com/
+
+Unlinked Paths (temporary):
+https://guarded-sands-89559.herokuapp.com/artists
+https://guarded-sands-89559.herokuapp.com/playlists
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
