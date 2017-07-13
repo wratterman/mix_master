@@ -3,8 +3,9 @@ require 'rails_helper'
 RSpec.feature "User goes to playlists index" do
   scenario "they see the page with all playlists" do
     existing_playlist = create(:playlist)
+    existing_playlist.songs.create(title: "TBD", artist_id: 1)
     song1 = create(:song)
-    song2 = existing_playlist.songs.create
+    song2 = existing_playlist.songs.last
     name = "Will"
 
     visit playlist_path(existing_playlist)
@@ -16,7 +17,7 @@ RSpec.feature "User goes to playlists index" do
     click_on "Update Playlist"
 
     expect(page).to have_content name
-    expect(page).to have_content song1.title
-    expect(page).to not_have_content song2.title
+    expect(page).to have_content song2.title
+    expect(page).to not_have_content song1.title
   end
 end
